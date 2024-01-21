@@ -1,5 +1,5 @@
 # SYMDYN
-Metapopulation model to analyse the selection of dispersal rates in a symbiont-host system.
+Metapopulation model applied to analyse symbiont dynamics.
 
 # Authors of the model code
 Alexandre Mestre, Michael Barfield, James H. Peniston, and Robert D. Holt
@@ -22,6 +22,8 @@ dynamics under extreme conditions in detail, by answering the following question
 We confirm that, in a competitive environment with extreme metapopulation conditions, a further increase in both intra- and off-patch harshness leads to higher values of optimal dispersal rate. We also identified an abundance-occupancy trade-off in dispersal between maximizing intra-patch abundance (lower dispersal) and occupancy (higher dispersal), which is conceptually similar to the dominance-tolerance trade-off known for specialist-generalist strategies. In par with this trade-off, we found that dispersal expands the tolerance limits to intra- and off-patch harshness. We also demonstrate that dispersal modifies the optimal environmental conditions in which clones outcompete each other. In addition, disturbance intensity reduces the range of intra- and off-patch environmental conditions that allow for species persistence, intensifying the effects of environmental harshness on optimal dispersal rates. Invasion conditions release higher-dispersal clones with suboptimal dispersal strategies from competitive exclusion, as a result of stochastic loss of stronger competitors at the initial invasion phase. We predict that the tolerance benefits of dispersal will be especially relevant in sink metapopulations where conditions are, by definition, more extreme, and the success of evolutionary rescue for long-term persistence should depend on the details underlying dispersal dynamics.
 
 # Description of the model
+
+The model combined deterministic intra-patch dynamics with logistic, density-dependent growth, and emigration, coupled by stochastic transience among patches mediated by the dispersal environment.
 
 ## Aims
 Determine whether a symbiont persists in a host population. We focus on the role of host quality and abundance, and the quality of off-host environment. In this model, within-host dynamics and shedding are mechanistic, whereas deaths of hosts and dispersal symbionts, and symbiont colonisation events are stochastic.
