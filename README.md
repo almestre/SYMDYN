@@ -23,7 +23,7 @@ We confirm that, in a competitive environment with extreme metapopulation condit
 
 # Description of the models
 
-The models apply metapopulation concepts to the dynamics of an horizontally transmitted symbiont inhabiting a population of hosts, where hosts are akin to habitat patches that contain symbiont infrapopulations interconnected by dispersal, and patch disturbance represents host death.
+The models apply metapopulation concepts to the dynamics of an horizontally transmitted symbiont inhabiting a population of hosts, where hosts are akin to ephemeral habitat patches that contain symbiont infrapopulations interconnected by dispersal, and patch disturbance represents host death.
 
 The repository symet contains four models:
 
