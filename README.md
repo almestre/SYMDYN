@@ -1,5 +1,5 @@
 # SYMET
-A set of metapopulation models applied to symbiont dynamics.
+A set of metapopulation models to analyse the population dynamics of an horizontally transmitted symbiont.
 
 # Authors of the model code
 Alexandre Mestre, Michael Barfield, James H. Peniston, and Robert D. Holt
