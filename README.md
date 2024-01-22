@@ -31,9 +31,9 @@ The repository symet contains four models:
 
 2. SYMDYN_STOC is a fully stochastic version of SYMDYN
 
-3. SYMCOM is a variant of SYMDYN where ten clones varying in dispersal rates compete to persist within the same population of hosts. This model was used to analyse patterns and drivers of symbiont dispersal selection.
+3. SYMCOMP is a variant of SYMDYN where ten clones varying in dispersal rates compete to persist within the same population of hosts. This model was used to analyse patterns and drivers of symbiont dispersal selection.
 
-4. SYMCOM_STOC is a fully stochastic version of SYMCOP
+4. SYMCOMP_STOC is a fully stochastic version of SYMCOP
 
 ## General assumptions
 A symbiont population is the number of symbionts within a host.
