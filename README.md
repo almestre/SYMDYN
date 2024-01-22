@@ -1,10 +1,10 @@
-# SYMDYN
-Metapopulation model applied to analyse symbiont dynamics.
+# SYMET
+A set of metapopulation models applied to symbiont dynamics.
 
 # Authors of the model code
 Alexandre Mestre, Michael Barfield, James H. Peniston, and Robert D. Holt
 
-This model was used to conduct theoretical research on dispersal evolution in a horizontally transmitted symbiont. The results from this research were presented in a talk at the 2018 ESA Annual Meeting held in New
+These models were used to conduct theoretical research on dispersal evolution in a horizontally transmitted symbiont. The results from this research were presented in a talk at the 2018 ESA Annual Meeting held in New
 Orleans, Louisiana:
 
 Mestre A (1), Barfield M (2), Peniston JM (2), Peres-Neto PR (1), Mesquita-Joanes F (3) and Holt RD (2). Tolerance benefit of dispersal when metapopulation conditions become extreme.
@@ -21,14 +21,21 @@ dynamics under extreme conditions in detail, by answering the following question
 ## Results/Conclusions
 We confirm that, in a competitive environment with extreme metapopulation conditions, a further increase in both intra- and off-patch harshness leads to higher values of optimal dispersal rate. We also identified an abundance-occupancy trade-off in dispersal between maximizing intra-patch abundance (lower dispersal) and occupancy (higher dispersal), which is conceptually similar to the dominance-tolerance trade-off known for specialist-generalist strategies. In par with this trade-off, we found that dispersal expands the tolerance limits to intra- and off-patch harshness. We also demonstrate that dispersal modifies the optimal environmental conditions in which clones outcompete each other. In addition, disturbance intensity reduces the range of intra- and off-patch environmental conditions that allow for species persistence, intensifying the effects of environmental harshness on optimal dispersal rates. Invasion conditions release higher-dispersal clones with suboptimal dispersal strategies from competitive exclusion, as a result of stochastic loss of stronger competitors at the initial invasion phase. We predict that the tolerance benefits of dispersal will be especially relevant in sink metapopulations where conditions are, by definition, more extreme, and the success of evolutionary rescue for long-term persistence should depend on the details underlying dispersal dynamics.
 
-# Description of the model
+# Description of the models
 
-The model combined deterministic intra-patch dynamics with logistic, density-dependent growth, and emigration, coupled by stochastic transience among patches mediated by the dispersal environment.
+The models apply metapopulation concepts to the dynamics of an horizontally transmitted symbiont inhabiting a population of hosts, where hosts are akin to habitat patches that contain symbiont infrapopulations interconnected by dispersal, and patch disturbance represents host death.
 
-## Aims
-Determine whether a symbiont persists in a host population. We focus on the role of host quality and abundance, and the quality of off-host environment. In this model, within-host dynamics and shedding are mechanistic, whereas deaths of hosts and dispersal symbionts, and symbiont colonisation events are stochastic.
+The repository symet contains four models:
 
-## Assumptions
+1. SYMDYN is a metapopulation model that simulates the dynamics of a symbiont inhabiting a host population. The model combines deterministic intra-patch dynamics with logistic, density-dependent growth, and emigration, coupled by stochastic transience among patches mediated by the dispersal environment. This model was used to determine whether a symbiont persists in a host population. We focused on the role of host quality and abundance, and the quality of off-host environment. In this model, within-host dynamics and emigration are mechanistic, whereas deaths of both hosts and dispersal symbionts, as well as symbiont colonisation events, are stochastic.
+
+2. SYMDYN_STOC is a fully stochastic version of SYMDYN
+
+3. SYMCOM is a variant of SYMDYN where ten clones varying in dispersal rates compete to persist within the same population of hosts. This model was used to analyse patterns and drivers of symbiont dispersal selection.
+
+4. SYMCOM_STOC is a fully stochastic version of SYMCOP
+
+## General assumptions
 A symbiont population is the number of symbionts within a host.
 The symbiont has a direct cycle and can complete the cycle within the same host individual.
 Symbiont populations are density-dependent, with a carrying capacity governed by host quality.
@@ -69,7 +76,7 @@ out_tinit is the shifting parameter controlling the initial day for the output
 Rep is the number of repetitions of each scenario
 N_Scen is the number of scenarios to be simulated
 
-## Equations
+## Equations (SYMDYN variant)
 Eq. 1. Estimation of ni increase at each time step using Runge-Kutta algorithm method 
 
 ni+1/2 = ni + [ ni ( r - C * ni ) - s * ni ] * ½ * h
@@ -83,7 +90,7 @@ Eq. 3. Calculation of mean abundance of colonized hosts (Ab) at each time step
 
 Ab = sum (symbiont population sizes) / Nc
 
-## Pseudo-code
+## Pseudo-code (SYMDYN variant)
 (top-down stepwise refinement)
 
 ### Problem statement
