@@ -1,4 +1,4 @@
-# SYMET
+# symet
 A set of metapopulation models to analyse the population dynamics of an horizontally transmitted symbiont.
 
 # Authors of the model code
